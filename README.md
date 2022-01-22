@@ -1,2 +1,2 @@
 # setupper
-A script to update, upgrade and instal or remove packages from an external list.
+A script to update, upgrade and install or remove packages from an external list.
