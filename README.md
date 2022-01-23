@@ -17,14 +17,14 @@ The script works with standard installations i.e.: sudo apt-get <APP_NAME> or su
   - update and install (UI),
   - update and remove (UR).
 
-#Installation:
+# Installation:
 - git clone https://github.com/betnero/setupper.git
 - sudo chmod +x setupper.py
 - Prepare the app list a.txt.
 - Make sure not to include apps that require more complex installation commands than "sudo apt-get install" or "sudo pacman -S".
 - python3 ./setupper.py
 
-#TO DO:
+# TO DO:
 - Remove the hardcoded name of the file with apps and let the user insert the name.
 - Error handling in case of a notification regarding a network failure or package installation/removal failure.
 - Overall user prompting to be improved. For the moment the script prompts only about INSTALLING, REMOVING AND PURGING and PERFORMING SYSTEM UPDATE & UPGRADE without verifying the status.
