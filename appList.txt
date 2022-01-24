@@ -13,4 +13,4 @@ iptables
 netcat
 whois 
 dig
-SomeBogusAppForTests
+BogusAppForTests

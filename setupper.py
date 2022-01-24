@@ -10,17 +10,18 @@ def force_sudo(): # Enforce sudo on the user
 
 force_sudo()
 
-d = platform.node() #a variable that contains info 
+d = platform.node() #a variable that contains info about the distro
 print("Your on:", d)
 
-apps = "a.txt" #a list of packages to be installed or removed
+apps = "appList.txt" #a list of packages to be installed or removed
 
 x = input('''Enter your option: update OS (U), install (I), remove (R), update and install (UI), update and remove (UR): ''')
 
 #Definning functions for update, install and removal
+
 def U(): #Update function
     print("--------------------")
-    print("PERFORMING SYSTEM UPDATE & UPGRADE...")
+    print("SYSTEM UPDATE & UPGRADE...")
     print("--------------------")
     if d == "debian":
         l = "sudo apt-get update -y && sudo apt-get upgrade -y"             
@@ -29,9 +30,6 @@ def U(): #Update function
     elif d == "arch":
         l = "sudo pacman -Syyu -y" 
     os.system(l)         
-    print("--------------------")
-    print("SYSTEM UP TO DATE...")
-    print("--------------------")
 
 def I(): #Install function
         
@@ -79,17 +77,13 @@ def R(): #Remove function
 #calling functions for each of the possibilities: ur, ui, i, r
 if x == "U" or x == "u":
     U()
-
 elif x == "I" or x == "i":
     I()
-   
 elif x == "R" or x == "r":
     R()
-
 elif x == "UR" or x == "RU" or x == "ru" or x == "ur":
     U()
     R()
-
 elif x == "UI" or x == "IU" or x == "iu" or x == "ui":
     U()
     I()
@@ -100,6 +94,6 @@ if x == "U":
     pass
 else:
     print("Your list of apps " + x)
-    f = open('a.txt', 'r')
+    f = open('appList.txt', 'r')
     file_contents = f.read()
     print(file_contents)
