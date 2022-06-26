@@ -12,11 +12,11 @@ def force_sudo(): # Enforce sudo on the user
 force_sudo()
 
 d = distro.id() #a variable that contains info about the distro
-print("Your on:", d)
+print("\nYour Linux distribution is", d)
 
 apps = "appList.txt" #a list of packages to be installed or removed
 
-x = input('''Enter your option: update OS (U), install (I), remove (R), update and install (UI), update and remove (UR): ''')
+x = input('''\nEnter your option: \n\n - update and upgrade your OS (U)\n - install packages from the list (I)\n - remove packages from the list (R)\n - update and install packages from the list (UI)\n - update and remove packages from the list (UR)\n\n Your choice: ''')
 
 #Definning functions for update, install and removal
 
