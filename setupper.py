@@ -1,6 +1,7 @@
 #!/bin/env python3
 
 import os
+import distro #for distro detection
 import platform #for distro detection
 
 def force_sudo(): # Enforce sudo on the user
@@ -10,7 +11,7 @@ def force_sudo(): # Enforce sudo on the user
 
 force_sudo()
 
-d = platform.node() #a variable that contains info about the distro
+d = distro.id() #a variable that contains info about the distro
 print("Your on:", d)
 
 apps = "appList.txt" #a list of packages to be installed or removed
@@ -28,7 +29,7 @@ def U(): #Update function
     elif d == "ubuntu":
         l = "sudo apt update -y && sudo apt upgrade -y"
     elif d == "arch":
-        l = "sudo pacman -Syyu -y" 
+        l = "sudo pacman -Syyu" 
     os.system(l)         
 
 def I(): #Install function
@@ -46,7 +47,7 @@ def I(): #Install function
                     elif d == "ubuntu":
                         l = "sudo apt install -y {}".format(line) 
                     elif d == "arch":
-                        l = "sudo pacman -S -y {}".format(line) 
+                        l = "sudo pacman -S {}".format(line) 
                     os.system(l)        
 
 def R(): #Remove function
@@ -63,13 +64,13 @@ def R(): #Remove function
                 elif d == "ubuntu":
                         l = "sudo apt remove -y {}".format(line) 
                 elif d == "arch":
-                        l = "sudo pacman -Rns -y {}".format(line) 
+                        l = "sudo pacman -Rns {}".format(line) 
                 os.system(l)
 
                 if d == "debian":
                         l = "sudo apt-get purge -y {}".format(line)               
                 elif d == "ubuntu":
-                        l = "sudo apt purge -y {}".format(line) 
+                        l = "sudo apt purge {}".format(line) 
                 elif d == "arch":
                         continue 
                 os.system(l)
