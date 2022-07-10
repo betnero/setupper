@@ -6,6 +6,8 @@ It should be specifically useful with a fresh Linux install to automate installa
 It should also be useful when using an exported list of apps used from a different distro to be installed on a new distro.
 The script works with standard installations i.e.: sudo apt-get <APP_NAME> or sudo pacman -S <APP_NAME>. More complicated installation commands have not been implemented.
 
+The script now is available intwo versions: settuper and settuper2. Latest version has arparsing implemented with some colors in the menu.
+
 # Features:
 - The script imports an external file with a list of apps/packages (appList.txt) an installs or removes them.
 - All the user needs to do is provide a .txt file listing the packages (appList.txt). The name of the file needs to remain "appList.txt" as for the moment it is hardcoded in the script. 
