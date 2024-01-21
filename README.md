@@ -1,5 +1,7 @@
 # setupper
 
+NOT MAINTAINED AT THE MOMENT
+
 The script installs or removes packages from an external list provided by the user. It can also do a system update and upgrade.
 It should be specifically useful with a fresh Linux install to automate installation of all of the standard apps that require the user to enter "sudo apt-get install <APP_NAME>" for each app separately. 
 
